@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
   ];
 
   const testimonials = [
-    { name: "Ana Silva", company: "Café Aroma", image: "", testimonial: "A WebDream transformou completamente nossa presença online...", rating: 5 },
+    { name: "Ana Silva", company: "Café Aroma", image: "", testimonial: "A mlluizDevTech transformou completamente nossa presença online...", rating: 5 },
     { name: "Ricardo Mendes", company: "Tech Solutions", image: "", testimonial: "Impressionado com a velocidade e qualidade do trabalho...", rating: 5 },
     { name: "Mariana Costa", company: "Bela Moda", image: "", testimonial: "Site responsivo e bonito que reflete perfeitamente nossa marca...", rating: 4 },
     { name: "Carlos Eduardo", company: "Arquitetura Moderna", image: "", testimonial: "O portfólio online criado trouxe vários projetos novos...", rating: 5 },
