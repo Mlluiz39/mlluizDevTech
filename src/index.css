@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); 
+
 
 @tailwind base;
 @tailwind components;
@@ -112,6 +113,10 @@
 }
 
 @layer components {
+  .pre-hidden {
+    @apply opacity-0;
+  }
+  
   .btn-primary {
     @apply bg-blue-600 hover:bg-blue-700 text-white font-poppins font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
   }

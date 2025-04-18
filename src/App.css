@@ -37,6 +37,14 @@ html, body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .motion-element {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 .card {
   padding: 2em;
 }
