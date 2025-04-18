@@ -39,7 +39,7 @@ const Index = () => {
         <meta name="theme-color" content="#1e40af" />
       </Helmet>
       
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col overflow-x-hidden">
         <Header />
         <main className="flex-grow">
           <article>

@@ -109,19 +109,19 @@ const Header = () => {
             
             <div className="grid grid-cols-1 gap-3">
               <a href="tel:+5511977869073" className="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
-                <Phone size={18} />
-                <span className="text-sm">(11) 97786-9073</span>
+                <Phone  className="text-white" size={18} />
+                <span className="text-sm text-white">(11) 97786-9073</span>
               </a>
               <a href="mailto:contato@mlluizDevTech.com" className="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
-                <Mail size={18} />
-                <span className="text-sm">contato@mlluizDevTech.com</span>
+                <Mail className="text-white" size={18} />
+                <span className="text-sm text-white">contato@mlluizDevTech.com</span>
               </a>
               <a 
                 href="https://wa.me/5511977869073"
                 className="flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 py-2 px-3 rounded-md"
               >
-                <MessageSquare size={18} />
-                <span className="text-sm font-medium">WhatsApp</span>
+                <MessageSquare className="text-white" size={18} />
+                <span className="text-sm text-white font-medium">WhatsApp</span>
               </a>
               
               <Button 
