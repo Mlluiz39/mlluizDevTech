@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import RevealOnScroll from "./RevealOnScroll";
 import { lazy, Suspense } from "react";
+import Bg from "../../public/europeana.png?url";
 
 // Lazy load decorative elements
 const HeroDecorations = lazy(() => import("./HeroDecorations"));
@@ -17,7 +18,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-[-1] bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/lovable-uploads/e15324cb-49cf-43b2-ae58-faaad2fab4f6.png')",
+          backgroundImage: `url(${Bg})`,
           filter: "blur(2px)"
         }}
         aria-hidden="true"
