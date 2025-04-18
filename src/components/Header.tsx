@@ -51,16 +51,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <div className="hidden lg:flex items-center space-x-4">
-              <a href="tel:+5511999999999" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors">
+              <a href="tel:+5511977869073" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors">
                 <Phone size={18} />
-                <span className="text-sm">(11) 99999-9999</span>
+                <span className="text-sm">(11) 97786-9073</span>
               </a>
               <a href="mailto:contato@mlluizDevTech.com" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors">
                 <Mail size={18} />
                 <span className="text-sm">contato@mlluizDevTech.com</span>
               </a>
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/5511977869073" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 px-3 py-1 rounded-md transition-all text-white"
@@ -108,16 +108,16 @@ const Header = () => {
             </nav>
             
             <div className="grid grid-cols-1 gap-3">
-              <a href="tel:+5511999999999" className="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
+              <a href="tel:+5511977869073" className="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
                 <Phone size={18} />
-                <span className="text-sm">(11) 99999-9999</span>
+                <span className="text-sm">(11) 97786-9073</span>
               </a>
               <a href="mailto:contato@mlluizDevTech.com" className="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
                 <Mail size={18} />
                 <span className="text-sm">contato@mlluizDevTech.com</span>
               </a>
               <a 
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5511977869073"
                 className="flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 py-2 px-3 rounded-md"
               >
                 <MessageSquare size={18} />

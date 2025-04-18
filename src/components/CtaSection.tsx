@@ -35,7 +35,7 @@ const CtaSection = () => {
             </Button>
 
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511977869073"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-10 rounded-md transition-all flex items-center justify-center space-x-2 text-lg"

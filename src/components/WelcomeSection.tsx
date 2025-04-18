@@ -30,7 +30,13 @@ const WelcomeSection = () => {
             
             <RevealOnScroll direction="up" delay={450}>
               <Button className="btn-cta group flex items-center space-x-2">
+              <a 
+                href="https://wa.me/5511977869073"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>Fale com um Especialista</span>
+              </a>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Button>
             </RevealOnScroll>

@@ -98,11 +98,11 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">Contato</h3>
               <div className="space-y-3">
-                <a href="tel:+5511999999999" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <a href="tel:+5511977869073" className="flex items-center text-gray-400 hover:text-white transition-colors group">
                   <div className="mr-3 bg-gray-800 p-2 rounded-full group-hover:bg-blue-600 transition-colors">
                     <Phone size={16} />
                   </div>
-                  <span>(11) 99999-9999</span>
+                  <span>(11) 97786-9073</span>
                 </a>
                 <a href="mailto:contato@mlluizDevTech.com" className="flex items-center text-gray-400 hover:text-white transition-colors group">
                   <div className="mr-3 bg-gray-800 p-2 rounded-full group-hover:bg-blue-600 transition-colors">

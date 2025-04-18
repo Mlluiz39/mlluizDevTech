@@ -46,7 +46,7 @@ const ServicesSection = () => {
     },
     {
       title: "Manutenção",
-      description: "Serviços de manutenção e suporte contínuos para garantir que seu site esteja sempre atualizado, seguro e funcionando perfeitamente.",
+      description: "Serviços de manutenção e suporte para garantir que seu site esteja sempre atualizado, seguro e funcionando perfeitamente.",
       icon: <WrenchIcon size={28} />,
       delay: 400
     }

@@ -32,9 +32,9 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>WebDream - Desenvolvimento de Sites Profissionais | Crie seu Site Agora</title>
-        <meta name="description" content="A WebDream transforma suas ideias em sites profissionais. Desenvolvimento web, hospedagem segura e suporte contínuo para impulsionar seu negócio online." />
-        <link rel="canonical" href="https://www.webdream.com.br/" />
+        <title>mlluizDevTech - Desenvolvimento de Sites Profissionais | Crie seu Site Agora</title>
+        <meta name="description" content="A mlluizDevTech transforma suas ideias em sites profissionais. Desenvolvimento web, hospedagem segura e suporte contínuo para impulsionar seu negócio online." />
+        <link rel="canonical" href="https://www.mlluizDevTech.com.br/" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="theme-color" content="#1e40af" />
       </Helmet>
