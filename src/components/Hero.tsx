@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import RevealOnScroll from "./RevealOnScroll";
 import { lazy, Suspense } from "react";
-import Bg from "../../public/europeana.png?url";
 
 // Lazy load decorative elements
 const HeroDecorations = lazy(() => import("./HeroDecorations"));
@@ -13,16 +12,6 @@ const Hero = () => {
     <section id="home" className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-95 z-0" />
-      
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 z-[-1] bg-cover bg-center"
-        style={{ 
-          backgroundImage: `url(${Bg})`,
-          filter: "blur(2px)"
-        }}
-        aria-hidden="true"
-      />
       
       {/* Animation elements - loaded only after main content */}
       <Suspense fallback={<div />}>
