@@ -20,11 +20,24 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center pt-24 overflow-hidden"
     >
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-[-1]"
+      >
+        <source src="/videos/capa_final.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+
+      <div className="absolute inset-0 bg-black/40 z-0" />
+
       {/* Background - simplificado no mobile */}
       {isMobile ? (
-        <div className="absolute inset-0 bg-blue-900 z-0" />
+        <div className="absolute inset-0 bg-black/60 z-0" />
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-95 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black-900 to-black-400 opacity-95 z-0" />
       )}
 
       {/* Elementos decorativos apenas no desktop */}
@@ -66,16 +79,17 @@ const Hero = () => {
 
             {isMobile ? (
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button className="btn-cta group flex items-center justify-center space-x-2 px-6 py-4 text-base sm:text-lg">
+                <Button className="group flex items-center justify-center space-x-2 px-6 py-4 text-base sm:text-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-black/20">
                   <span>Quero meu site agora</span>
                   <ArrowRight
                     size={20}
                     className="group-hover:translate-x-1 transition-transform"
                   />
                 </Button>
+
                 <Button
                   variant="outline"
-                  className="btn-secondary px-6 py-4 text-base sm:text-lg hover:bg-white/10"
+                  className="btn-secondary px-6 py-4 text-base sm:text-lg rounded-xl hover:bg-white/10 hover:text-white"
                 >
                   Explorar serviços
                 </Button>
@@ -83,16 +97,17 @@ const Hero = () => {
             ) : (
               <RevealOnScroll direction="up" delay={400}>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <Button className="btn-cta group flex items-center justify-center space-x-2 px-6 py-4 text-base sm:text-lg">
+                  <Button className="group flex items-center justify-center space-x-2 px-6 py-4 text-base sm:text-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-black/20">
                     <span>Quero meu site agora</span>
                     <ArrowRight
                       size={20}
                       className="group-hover:translate-x-1 transition-transform"
                     />
                   </Button>
+
                   <Button
                     variant="outline"
-                    className="btn-secondary px-6 py-4 text-base sm:text-lg hover:bg-white/10"
+                    className="btn-secondary px-6 py-4 text-base sm:text-lg rounded-xl hover:bg-white/10 hover:text-white"
                   >
                     Explorar serviços
                   </Button>

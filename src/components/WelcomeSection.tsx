@@ -5,7 +5,7 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const WelcomeSection = () => {
   return (
-    <section id="about" className="section-padding bg-gray-50 py-20">
+    <section id="about" className="section-padding bg-gray-100 py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-20">
           <div className="w-full md:w-1/2">
@@ -29,7 +29,7 @@ const WelcomeSection = () => {
             </RevealOnScroll>
             
             <RevealOnScroll direction="up" delay={450}>
-              <Button className="btn-cta group flex items-center space-x-2">
+              <Button className="group flex items-center justify-center space-x-2 px-6 py-4 text-base sm:text-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-black/20">
               <a 
                 href="https://wa.me/5511977869073"
                 target="_blank"
