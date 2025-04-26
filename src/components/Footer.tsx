@@ -198,13 +198,13 @@ const Footer = () => {
                   <span>(11) 97786-9073</span>
                 </a>
                 <a
-                  href="mailto:contato@mlluizDevTech.com"
+                  href="mailto:mlluizdevtech@gmail.com"
                   className="flex items-center text-gray-400 hover:text-white transition-colors group"
                 >
                   <div className="mr-3 bg-gray-800 p-2 rounded-full group-hover:bg-blue-600 transition-colors">
                     <Mail size={16} className='text-red-500' />
                   </div>
-                  <span>contato@mlluizDevTech.com</span>
+                  <span>mlluizdevtech@gmail.com</span>
                 </a>
                 <div className="flex items-start text-gray-400 group">
                   <div className="mr-3 bg-gray-800 p-2 rounded-full group-hover:bg-blue-600 transition-colors mt-1">
