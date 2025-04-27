@@ -8,36 +8,68 @@ const FloatingInput = ({
   name,
   isTextarea = false,
   options,
-}: { 
-  label: string; 
-  type?: string; 
-  name: string; 
-  isTextarea?: boolean; 
-  options?: string[]; 
+  required = true,
+}: {
+  label: string
+  type?: string
+  name: string
+  isTextarea?: boolean
+  options?: string[]
+  required?: boolean
 }) => {
-  const [isFocused, setIsFocused] = useState(false)
+  const [error, setError] = useState(false)
+
+  const handleBlur = (
+    e: React.FocusEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    if (required && !e.target.value.trim()) {
+      setError(true)
+    } else {
+      setError(false)
+    }
+  }
 
   return (
     <div className="relative w-full">
+      <label
+        className={`absolute -top-2 left-4 bg-white px-1 text-sm font-medium transition-all
+          ${error ? 'text-red-500' : 'text-gray-700'}`}
+      >
+        {label} {required && <span className="text-red-500">*</span>}
+      </label>
+
       {isTextarea ? (
         <textarea
           name={name}
           rows={5}
-          onFocus={() => setIsFocused(true)}
-          onBlur={e => setIsFocused(e.target.value !== '')}
-          className="peer w-full p-4 pt-6 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
-          placeholder=" "
-          required
+          onBlur={handleBlur}
+          defaultValue=""
+          className={`w-full p-4 pt-6 rounded-xl border
+            ${
+              error
+                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
+            }
+            bg-gray-50 focus:outline-none focus:ring-2 transition-all resize-none`}
+          required={required}
         />
       ) : options ? (
         <select
           name={name}
-          onFocus={() => setIsFocused(true)}
-          onBlur={e => setIsFocused(e.target.value !== '')}
-          className="peer w-full p-4 pt-6 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 appearance-none"
-          required
+          onBlur={handleBlur}
+          defaultValue=""
+          className={`w-full p-4 pt-6 rounded-xl border
+            ${
+              error
+                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
+            }
+            bg-gray-50 focus:outline-none focus:ring-2 transition-all appearance-none`}
+          required={required}
         >
-          <option value="" disabled selected>
+          <option disabled>
             Selecione o assunto
           </option>
           {options.map((option: string) => (
@@ -50,20 +82,17 @@ const FloatingInput = ({
         <input
           type={type}
           name={name}
-          onFocus={() => setIsFocused(true)}
-          onBlur={e => setIsFocused(e.target.value !== '')}
-          className="peer w-full p-4 pt-6 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
-          placeholder=" "
-          required
+          onBlur={handleBlur}
+          className={`w-full p-4 pt-6 rounded-xl border
+            ${
+              error
+                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
+            }
+            bg-gray-50 focus:outline-none focus:ring-2 transition-all`}
+          required={required}
         />
       )}
-      <label
-        className={`absolute left-4 top-4 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base ${
-          isFocused && 'top-2 text-xs text-blue-600'
-        }`}
-      >
-        {label}
-      </label>
     </div>
   )
 }
