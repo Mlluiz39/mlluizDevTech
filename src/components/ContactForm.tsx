@@ -52,7 +52,7 @@ const FloatingInput = ({
                 ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
                 : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
             }
-            bg-gray-50 focus:outline-none focus:ring-2 transition-all resize-none`}
+            bg-white focus:outline-none focus:ring-2 transition-all resize-none`}
           required={required}
         />
       ) : options ? (
@@ -66,7 +66,7 @@ const FloatingInput = ({
                 ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
                 : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
             }
-            bg-gray-50 focus:outline-none focus:ring-2 transition-all appearance-none`}
+            bg-white focus:outline-none focus:ring-2 transition-all appearance-none`}
           required={required}
         >
           <option disabled>
@@ -89,7 +89,7 @@ const FloatingInput = ({
                 ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
                 : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
             }
-            bg-gray-50 focus:outline-none focus:ring-2 transition-all`}
+            bg-white focus:outline-none focus:ring-2 transition-all`}
           required={required}
         />
       )}

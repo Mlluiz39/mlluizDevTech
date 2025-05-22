@@ -10,6 +10,7 @@ import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import { setupScrollReveal } from '../utils/scrollReveal';
 import { Helmet } from 'react-helmet-async';
+import WebsitePlans from '@/components/WebsitePlans';
 
 const Index = () => {
   // Add scroll padding for fixed header
@@ -47,6 +48,7 @@ const Index = () => {
             <WelcomeSection />
             <ServicesSection />
             <TestimonialsSection />
+            <WebsitePlans />
             <CtaSection />
             <ContactForm />
           </article>

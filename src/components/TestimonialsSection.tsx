@@ -201,10 +201,10 @@ const TestimonialsSection = () => {
       className="bg-blue-50"
       aria-labelledby="testimonials-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-1">
         {/* Benefícios */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-blue-700 mb-8 text-center">
+        <div className="my-16">
+          <h3 className="text-2xl font-semibold text-blue-700 mb-8 text-center mt-12">
             Por que nos escolher
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -238,7 +238,7 @@ const TestimonialsSection = () => {
 
         {/* Depoimentos */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-blue-700 mb-8 text-center">Depoimentos</h3>
+          <h3 className="text-2xl font-semibold text-blue-700 mb-8 text-center ">Depoimentos</h3>
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (

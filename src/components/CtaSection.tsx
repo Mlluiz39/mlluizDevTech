@@ -6,7 +6,7 @@ const CtaSection = () => {
   return (
     <section
       id="contact"
-      className="bg-blue-700 text-white py-20 relative overflow-hidden"
+      className="bg-blue-600 text-white py-20 relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-to-t from-blue-400 to-transparent rounded-full blur-3xl opacity-10 animate-float"></div>
