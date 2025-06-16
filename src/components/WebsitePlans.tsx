@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const plans = [
   {
     title: 'BÁSICO',
-    price: 'R$ 800',
+    price: 'R$ 500',
     description: 'Ideal para quem precisa de uma landing page simples',
     features: [
       'Landing page responsiva',
@@ -18,7 +18,7 @@ const plans = [
   },
   {
     title: 'PROFISSIONAL',
-    price: 'R$ 1.200',
+    price: 'R$ 1.000',
     description: 'Para empresas que precisam de até 4 páginas',
     features: [
       'Até 4 páginas',
