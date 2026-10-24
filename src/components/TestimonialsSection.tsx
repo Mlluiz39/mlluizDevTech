@@ -1,8 +1,9 @@
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Ana Silva",
-      company: "Café Aroma",
+      name: "Denis",
+      company: "SaintDeni Alimentos",
+      website: "https://saintdenialimentos.com.br/",
       image: "",
       testimonial:
         "A mlluizDevTech transformou completamente nossa presença online...",
@@ -10,14 +11,16 @@ export default function TestimonialsSection() {
     },
     {
       name: "Ricardo Mendes",
-      company: "Tech Solutions",
+      company: "Quanto Perdi",
+      website: "https://quantoperdi.netlify.app/",
       image: "",
       testimonial: "Impressionado com a velocidade e qualidade do trabalho...",
       rating: 5,
     },
     {
-      name: "Mariana Costa",
-      company: "Bela Moda",
+      name: "Fátima Silva",
+      company: "Lumiere",
+      website: "https://lumiere-intima.netlify.app/",
       image: "",
       testimonial:
         "Site responsivo e bonito que reflete perfeitamente nossa marca...",
@@ -56,7 +59,21 @@ export default function TestimonialsSection() {
               <blockquote>“{item.testimonial}”</blockquote>
               <figcaption>
                 <strong>{item.name}</strong>
-                <span>{item.company}</span>
+                <span>
+                  {item.website ? (
+                    <a
+                      href={item.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-4"
+                    >
+                      {item.company}
+                      <span className="sr-only"> (abre em nova aba)</span>
+                    </a>
+                  ) : (
+                    item.company
+                  )}
+                </span>
               </figcaption>
             </figure>
           ))}

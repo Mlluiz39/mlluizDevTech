@@ -32,12 +32,14 @@ const plans = [
   {
     title: "PREMIUM",
     price: "R$ 2.000",
-    description: "Para projetos com mais páginas e autenticação",
+    description: "Para projetos com mais páginas, autenticação e automações com IA",
     features: [
       "Mais de 4 páginas",
       "Sistema de autenticação (login)",
       "Integração com banco de dados",
       "Painel administrativo (básico)",
+      "Automações",
+      "Automações com IA",
       "Até 12 atualizações inclusas",
     ],
     button: "Solicitar Orçamento",
