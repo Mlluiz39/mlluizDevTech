@@ -1,159 +1,95 @@
-import { motion } from 'framer-motion'
-import { Send } from 'lucide-react'
-import { useState } from 'react'
-
-const FloatingInput = ({
-  label,
-  type = 'text',
-  name,
-  isTextarea = false,
-  options,
-  required = true,
-}: {
-  label: string
-  type?: string
-  name: string
-  isTextarea?: boolean
-  options?: string[]
-  required?: boolean
-}) => {
-  const [error, setError] = useState(false)
-
-  const handleBlur = (
-    e: React.FocusEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    if (required && !e.target.value.trim()) {
-      setError(true)
-    } else {
-      setError(false)
-    }
-  }
-
+import { ArrowUpRight } from "lucide-react";
+export default function ContactForm() {
   return (
-    <div className="relative w-full">
-      <label
-        className={`absolute -top-2 left-4 bg-white px-1 text-sm font-medium transition-all
-          ${error ? 'text-red-500' : 'text-gray-700'}`}
-      >
-        {label} {required && <span className="text-red-500">*</span>}
-      </label>
-
-      {isTextarea ? (
-        <textarea
-          name={name}
-          rows={5}
-          onBlur={handleBlur}
-          defaultValue=""
-          className={`w-full p-4 pt-6 rounded-xl border
-            ${
-              error
-                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
-            }
-            bg-white focus:outline-none focus:ring-2 transition-all resize-none`}
-          required={required}
-        />
-      ) : options ? (
-        <select
-          name={name}
-          onBlur={handleBlur}
-          defaultValue=""
-          className={`w-full p-4 pt-6 rounded-xl border
-            ${
-              error
-                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
-            }
-            bg-white focus:outline-none focus:ring-2 transition-all appearance-none`}
-          required={required}
-        >
-          <option disabled>
-            Selecione o assunto
-          </option>
-          {options.map((option: string) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      ) : (
-        <input
-          type={type}
-          name={name}
-          onBlur={handleBlur}
-          className={`w-full p-4 pt-6 rounded-xl border
-            ${
-              error
-                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                : 'border-gray-300 focus:border-blue-600 focus:ring-blue-500'
-            }
-            bg-white focus:outline-none focus:ring-2 transition-all`}
-          required={required}
-        />
-      )}
-    </div>
-  )
-}
-
-const ContactForm = () => {
-  return (
-    <motion.section
-      id="contato"
-      className="bg-gradient-to-b from-white to-gray-100 py-20 px-6 md:px-12 lg:px-32"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+    <section
+      id="contact"
+      className="section site-container"
+      aria-labelledby="contact-title"
     >
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-blue-900 mb-6">
-          Entre em Contato
-        </h2>
-        <p className="text-center text-gray-500 mb-12">
-          Vamos construir algo incrível juntos.
-        </p>
-
-        <motion.form
+      <span id="contato" className="anchor-alias" />
+      <div className="contact-form-layout">
+        <div>
+          <span className="eyebrow">04 — Comece uma conversa</span>
+          <h2 id="contact-title">
+            O que você
+            <br />
+            quer construir?
+          </h2>
+          <p>
+            Conte um pouco sobre sua ideia. Vamos entender o cenário e conversar
+            sobre o melhor caminho para o seu site.
+          </p>
+          <a className="text-link" href="tel:+5511977869073">
+            (11) 97786-9073 <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <p className="contact-hours">Segunda a sexta, das 9h às 18h.</p>
+        </div>
+        <form
+          className="project-form"
           action="https://formsubmit.co/mlluizdevtech@gmail.com"
           method="POST"
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-10 rounded-2xl shadow-2xl border border-gray-200"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
         >
-          <FloatingInput label="Seu nome" name="name" />
-          <FloatingInput label="Seu e-mail" type="email" name="email" />
-          <FloatingInput
-            label="Assunto"
-            name="subject"
-            options={['Criação de Sites', 'Manutenção', 'Hospedagem']}
-          />
-          <FloatingInput label="Sua mensagem" name="message" isTextarea />
-
-          {/* opções extras */}
+          <div className="form-pair">
+            <div>
+              <label htmlFor="name">Seu nome *</label>
+              <input
+                id="name"
+                name="name"
+                autoComplete="name"
+                required
+                placeholder="Como podemos chamar você?"
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Seu e-mail *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                placeholder="voce@empresa.com.br"
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="subject">Como podemos ajudar? *</label>
+            <select id="subject" name="subject" required defaultValue="">
+              <option value="" disabled>
+                Selecione um serviço
+              </option>
+              <option>Criação de Sites</option>
+              <option>Automações</option>
+              <option>Automações com IA</option>
+              <option>Manutenção</option>
+              <option>Hospedagem</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="message">Sobre seu projeto *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              required
+              placeholder="O que seu negócio precisa hoje?"
+            />
+          </div>
           <input type="hidden" name="_captcha" value="false" />
           <input
             type="hidden"
             name="_next"
-            value="https://mlluiz-dev-tech.netlify.app/thanks"
+            value={`${window.location.origin}/thanks`}
           />
-
-          <div className="md:col-span-2 text-center">
-            <button
-              type="submit"
-              className="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg inline-flex items-center transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              <Send className="mr-2" size={20} />
-              Enviar mensagem
-            </button>
-          </div>
-        </motion.form>
+          <p className="form-note">
+            * Campos obrigatórios. Usaremos seus dados para responder ao seu
+            contato.
+          </p>
+          <button className="button button-primary" type="submit">
+            Enviar mensagem <ArrowUpRight size={18} aria-hidden="true" />
+          </button>
+        </form>
       </div>
-    </motion.section>
-  )
+    </section>
+  );
 }
-
-export default ContactForm

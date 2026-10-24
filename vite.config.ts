@@ -19,10 +19,10 @@ export default defineConfig(({ mode }) => ({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'WebDream',
-        short_name: 'WebDream',
-        theme_color: '#1e40af',
-        background_color: '#ffffff',
+        name: 'MLLuiz DevTech',
+        short_name: 'MLLuiz DevTech',
+        theme_color: '#285343',
+        background_color: '#f7f7f2',
         display: 'standalone',
         icons: [
           {

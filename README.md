@@ -216,3 +216,21 @@ A pasta `dist/` contém os arquivos prontos para produção.
 ---
 
 Feito com ❤️ por mlluiz
+
+
+## Identidade visual do portfólio
+
+A página de serviços reutiliza a identidade do projeto `portfolio`: DM Sans local,
+fundo `#f7f7f2`, texto `#252b27`, verde `#285343` e divisórias `#dcded5`.
+Os tokens e estilos compartilhados estão em `src/portfolio-system.css`; os estilos
+específicos da página estão em `src/services.css`. A ordem de importação em
+`src/main.tsx` mantém esses estilos depois do reset do Tailwind.
+
+O componente `src/components/ui/perspective-tunnel-hero.tsx` adapta o túnel 3D
+com cartões ilustrativos em HTML/CSS, rolagem nativa e parallax local ao ponteiro.
+Respeita `prefers-reduced-motion` e não depende de imagens externas. Os cartões
+são ilustrações de serviços, não capturas de projetos de clientes.
+
+Planos, preços, depoimentos e destino FormSubmit foram preservados. O formulário
+redireciona para `/thanks` no domínio atual. A entrega de e-mail depende do
+FormSubmit; a validação local não envia mensagens reais.
