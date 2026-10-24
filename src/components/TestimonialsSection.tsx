@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
       <div className="site-container">
         <div className="section-heading">
           <span className="eyebrow">Experiências de clientes</span>
-          <h2 id="testimonials-title">Cada projeto, uma parceria.</h2>
+          <h2 id="testimonials-title">Cada projeto, uma parceria nova.</h2>
         </div>
         <div className="quotes-grid">
           {testimonials.map((item) => (
